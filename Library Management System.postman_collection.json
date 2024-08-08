@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "66f6db96-71e7-486a-b687-c868fe8fd4bb",
+		"name": "Library Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21751693"
+	},
+	"item": [
+		{
+			"name": "Create Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzEyNjE3OSwiaWF0IjoxNzIzMTIyNTc5fQ.d_cQlzgD8mcLRDDKCEmYVeY2Icpqlg4KAmRkLACZjtxXXPAwsMWCIPX-HFlLf1fyvphnE-JEUrjAiJWcuUtQqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"To Kill a Mockingbird\",\r\n  \"author\": \"Harper Lee\",\r\n  \"publicationYear\": 1960,\r\n  \"isbn\": \"9780061120084\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated Title\",\r\n    \"author\": \"Updated Author\",\r\n    \"publicationYear\": 2024,\r\n    \"isbn\": \"9780061120081\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Patrons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/patrons",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patron By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/patrons/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"patrons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"phoneNumber\": \"+1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/patrons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patron",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Updated\",\r\n  \"email\": \"john.updated@example.com\",\r\n  \"phoneNumber\": \"1234567891\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/patrons/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"patrons",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/patrons/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"patrons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrowBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   // \"borrowingDate\" : \"2024-08-08T09:17:27.4715695\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/borrow/1/patron/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"borrow",
+						"1",
+						"patron",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReturnBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyMzExNjc4NSwiaWF0IjoxNzIzMTEzMTg1fQ.YgKFaVbWsNHI9xdkIjL_HkXoNfSi9zPMflWEDTyEsARdr-6GDmyBdQ-QT8lhuJwZt_mLLjAb4NADMOjAWZcMfA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     // \"returnDate\" : \"2024-08-08T09:25:27.4715695\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/return/1/patron/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"return",
+						"1",
+						"patron",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: Library Management
+  datasource:
+    url: jdbc:postgresql://localhost:5432/library
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 12345678
+  jpa:
+    defer-datasource-initialization: true
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+
+token:
+  secret: 'Bhmps8O5Ml6MPeR228ycb+TsbtqvQtKnbTRT4WSboyJMTlYkLskDY7rueDZl7HGA+VMQKOMv7AAMfY4QNRgHng=='
+  expiration: 3600000
+
+logging:
+  level:
+    org:
+      springframework:
+        aop:
+          interceptor:
+            PerformanceMonitorInterceptor: trace
